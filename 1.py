@@ -5,7 +5,7 @@
 import time
 import socket
 import smtplib  #加载smtplib模块
-from email.mime.text import MIMEText
+
 from email.utils import formataddr
 from datetime import datetime, timedelta
 from time import sleep
