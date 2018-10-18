@@ -1,0 +1,110 @@
+1. command  & 让进程在后台运行
+
+2. jobs –l 查看后台运行的进程
+
+3. fg %n 让后台运行的进程n到前台来
+
+4. bg %n 让进程n到后台去;
+
+
+sudo apt install nethogs
+查看网速
+nethogs
+
+
+nohup python -u 1.py > 1.out 2>&1 &
+
+tail -f 1.out
+
+
+
+
+top
+htop
+
+
+
+你可以使用less命令对输出进行管道，这样你就可以按你的速度滚动阅读：
+
+ps -A | less 
+以下命令会搜索chrome进程：ps -A | grep chrome
+
+pgrep
+给定一个搜索关键词，pgrep命令会返回所有匹配这个关键词的进程ID。
+
+例如，你可以使用以下命令寻找 chrome 的 PID:
+
+pgrep chrome
+你也可以将这个命令与kill命令结合起来杀死一个特定的进程。
+
+但是，使用pkill或者killall会更简单。
+pkill firefox 
+killall firefox 
+
+
+sudo apt-get update  更新源
+sudo apt-get install package 安装包
+sudo apt-get remove package 删除包
+sudo apt-cache search package 搜索软件包
+sudo apt-cache show package  获取包的相关信息，如说明、大小、版本等
+sudo apt-get install package --reinstall  重新安装包
+sudo apt-get -f install  修复安装
+sudo apt-get remove package --purge 删除包，包括配置文件等
+sudo apt-get build-dep package 安装相关的编译环境
+sudo apt-get upgrade 更新已安装的包
+sudo apt-get dist-upgrade 升级系统
+sudo apt-cache depends package 了解使用该包依赖那些包
+sudo apt-cache rdepends package 查看该包被哪些包依赖
+sudo apt-get source package  下载该包的源代码
+sudo apt-get clean && sudo apt-get autoclean 清理无用的包
+sudo apt-get check 检查是否有损坏的依赖
+
+
+
+定时任务
+crontab -e
+# m h  dom mon dow   command
+具体意义表示：分钟 小时 日期 月份 星期 命令，在某月（mon）的某天（dom）或者星期几（dow）的几点（h，24小时制）几分（m）执行某个命令（command），*表示任意时间。例如：
+
+3 * * * *  /usr/PHP5.6.1/bin/php /home/www/Test.php
+就是：每小时的03时执行/home/www/Test.php下的Test.php脚本。
+
+注意：在完成编辑以后，要重新启动cron进程：
+
+~# /etc/init.d/cron restart
+
+
+
+
+1.输入“crontab -e”，提示“no crontab for root - using an empty one”
+
+处理：这个是正常的，提示你，当前设定的用户，没有cron任务。
+
+2.输入“crontab -e”，输入内容后，退出时，提示保存；保存后，任务不能成功添加。
+
+处理：你选择的编辑器有问题。请在root角色下输入“select-editor”，可以重新进行选择。
+
+3.编辑完任务并保存后，重启服务的问题。
+
+有些网文说是“service crond restart”进行服务重启，在这里，需要特别注意的是，在ubuntu下cron服务的重启应该是“service cron restart ”。注意，是“cron”，而不是“crond”。
+
+
+
+
+shall
+
+#!/bin/bash
+echo "Hello World !"
+
+
+
+python -m SimpleHTTPServer 8080
+建立http
+
+
+python -m pyftpdlib
+这样就启动了一个ftp服务器，默认端口是2121，用于匿名访问，快速分享文件
+
+ python -m pyftpdlib -w
+
+开启后匿名用户登录后可上传文件

@@ -1,0 +1,66 @@
+  0223                      0211                  0229                            
+10211084145       10211084147     10211084149     10211084151
+
+
+0217                      0216                       0215                   
+102110841012    102110841014    102110841016    102110841018
+
+
+
+
+10211084906
+
+
+
+
+
+
+26  20    102110842706
+
+
+
+
+24  16  102110842618
+24  17  102110842616
+23  16  102110842615
+23  17  102110842613
+
+22 17    102110842610
+21 17   102110842607
+26 21  102110842707
+2915  102110842548      2914   102110842547    2913   102110842549    2912  102110842464
+2814   102110842545
+2714   102110842542
+
+
+
+
+
+
+
+
+
+
+GET http://mob.huanghuai.edu.cn/huanghuai/libraryAppointmentOrder_appointSeat?cardnum=YKT1534130211&seatId=102110841018 HTTP/1.1
+cache: 0
+Host: mob.huanghuai.edu.cn
+Connection: close
+Accept-Encoding: gzip
+User-Agent: okhttp/3.9.0
+
+
+
+
+102110842557                              102110842558
+
+102110842554   102110842553  102110842555
+
+
+GET http://mob.huanghuai.edu.cn/huanghuai/libraryAppointmentOrder_getAppoint?cardnum=YKT1534130211 HTTP/1.1
+cache: 0
+Host: mob.huanghuai.edu.cn
+Connection: Keep-Alive
+Accept-Encoding: gzip
+User-Agent: okhttp/3.9.0
+If-Modified-Since: Sat, 08 Sep 2018 06:09:21 GMT
+

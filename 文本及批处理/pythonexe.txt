@@ -1,0 +1,15 @@
+
+
+
+cd C:\Users\OoO\Desktop\wz\826
+      C:\Python27\Scripts\pyinstaller -F gqy16.py
+
+
+python -m py_compile gqy16.py
+
+
+
+
+cxfreeze F:\pythonexe\python\111.py --target-dir F:\pythonexe\exe --no-copy-deps
+
+
